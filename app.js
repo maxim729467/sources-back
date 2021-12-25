@@ -15,7 +15,7 @@ const formatsLogger = app.get("env") === "development" ? "dev" : "short";
 app.use(logger(formatsLogger));
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: `${process.env.APPHOST}`,
     methods: "GET,PATCH,POST,DELETE",
     preflightContinue: false,
     optionsSuccessStatus: 204,
