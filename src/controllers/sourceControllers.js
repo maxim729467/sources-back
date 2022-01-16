@@ -55,7 +55,6 @@ const addSource = async (req, res, next) => {
 const updateSource = async (req, res, next) => {
   try {
     const { sourceId } = req.params;
-    console.log(req.params);
     const source = await Source.findOneAndUpdate({ _id: sourceId }, req.body, {
       new: true,
     }).exec();

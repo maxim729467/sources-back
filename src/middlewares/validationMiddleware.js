@@ -7,13 +7,13 @@ const postSourceSchema = Joi.object({
   name: stringSchema.required(),
   url: stringSchema.required(),
   folder: stringSchema.required(),
-  description: stringSchema.optional(),
+  description: stringSchema.allow("").optional(),
 });
 
 const updateSourceSchema = Joi.object({
   name: stringSchema.optional(),
   url: stringSchema.optional(),
-  description: stringSchema.optional(),
+  description: stringSchema.allow("").optional(),
 }).min(1);
 
 const postFolderSchema = Joi.object({
