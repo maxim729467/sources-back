@@ -14,7 +14,7 @@ const formatsLogger = app.get("env") === "development" ? "dev" : "short";
 app.use(logger(formatsLogger));
 app.use(
   cors({
-    origin: "*",
+    origin: "https://dev-notes-service.netlify.app/",
     methods: "GET,PATCH,POST,DELETE,OPTIONS,HEAD",
     preflightContinue: false,
     optionsSuccessStatus: 204,
